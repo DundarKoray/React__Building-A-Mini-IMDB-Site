@@ -82,6 +82,8 @@ class Home extends React.Component {
                     <SearchBar callback={this.searchItems} />
                 </div> : null }
                 <div className="rmdb-home-grid">
+                    
+                    {this.state.loading ? <Spinner /> : null}
                     <FourColGrid 
                       header={this.state.searchTerm ? 'Search Result' : 'Popular Movies'}
                       loading={this.state.loading} 
@@ -95,9 +97,7 @@ class Home extends React.Component {
                                    movieName={element.original_title}
                                 />
                       })}
-                    </FourColGrid>
-                    {this.state.loading ? <Spinner /> : null}
-                    {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
+                    </FourColGrid>{(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
                       <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
                       : null }
                 </div>

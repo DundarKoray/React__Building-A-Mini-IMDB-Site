@@ -87,7 +87,7 @@ class Home extends React.Component {
                       header={this.state.searchTerm ? 'Search Result' : 'Popular Movies'}
                       loading={this.state.loading} 
                       >
-                      {this.state.movies.map ( (element, i) => {
+                      {this.state.movies.map((element, i) => {
                           return <MovieThumb
                                    key={i}
                                    clickable={true}
@@ -96,10 +96,10 @@ class Home extends React.Component {
                                    movieName={element.original_title}
                                    />
                                 })}
-                                </FourColGrid>
-                                {this.state.loading ? <Spinner /> : null}
-                                {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
-                      <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
+                </FourColGrid>
+                {this.state.loading ? <Spinner /> : null}
+                {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
+                <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
                       : null }
                 </div>
             </div>

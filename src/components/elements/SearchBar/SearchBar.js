@@ -32,7 +32,6 @@ class SearchBar extends React.Component {
                       value={this.state.value}
                     />
                 </div>
-                SearchBar
             </div>
         )
     }

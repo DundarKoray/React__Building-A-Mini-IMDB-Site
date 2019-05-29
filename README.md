@@ -6,10 +6,10 @@ This project is made by using react. This is sort of a light version of IMDB web
 
 
 # Technologies
-*HTML
-*CSS
-*JavaScript
-*React
-*REST_API
+* HTML
+* CSS
+* JavaScript
+* React
+* REST_API
 
 
